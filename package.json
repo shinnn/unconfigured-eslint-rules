@@ -1,0 +1,39 @@
+{
+  "name": "unconfigured-eslint-rules",
+  "version": "1.0.0",
+  "description": "Detect unconfigured ESLint rules",
+  "repository": "shinnn/unconfigured-eslint-rules",
+  "scripts": {
+    "pretest": "eslint --config @shinnn index.js test/test.js",
+    "test": "node --strong_mode --harmony_arrow_functions test/test.js",
+    "coverage": "node --strong_mode --harmony_arrow_functions node_modules/.bin/istanbul cover test/test.js"
+  },
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "eslint",
+    "setting",
+    "config",
+    "configuration",
+    "array",
+    "list",
+    "rule",
+    "rules",
+    "check",
+    "detect",
+    "unconfigured"
+  ],
+  "dependencies": {
+    "all-eslint-rules": "^1.0.1",
+    "array-difference": "^0.0.1",
+    "configured-eslint-rules": "^1.0.0"
+  },
+  "devDependencies": {
+    "@shinnn/eslint-config": "^0.0.5",
+    "eslint": "^1.3.1",
+    "istanbul": "^0.3.19",
+    "tape": "^4.2.0"
+  }
+}
