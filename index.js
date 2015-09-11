@@ -1,4 +1,4 @@
-'use strong';
+'use strict';
 
 const allEslintRules = require('all-eslint-rules');
 const arrayDifference = require('array-difference');
