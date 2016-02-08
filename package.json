@@ -26,14 +26,14 @@
     "unconfigured"
   ],
   "dependencies": {
-    "all-eslint-rules": "^1.0.1",
+    "all-eslint-rules": "^2.0.0",
     "array-difference": "^0.0.1",
-    "configured-eslint-rules": "^1.0.0"
+    "configured-eslint-rules": "^2.0.0"
   },
   "devDependencies": {
     "@shinnn/eslint-config-node": "^1.0.1",
     "eslint": "^1.10.3",
-    "istanbul": "^0.4.1",
+    "istanbul": "^0.4.2",
     "tape": "^4.4.0"
   }
 }
