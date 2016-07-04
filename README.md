@@ -8,16 +8,16 @@
 
 Detect unconfigured [ESLint](http://eslint.org/) rules
 
-```js
+```javascript
 /*
-    ./eslintrc:
+    ./eslintrc.js:
 
-    {
-      "rules": {
-        "no-alert": 2,
-        "no-array-constructor": 1,
-        "no-bitwise": 0,
-        "linebreak-style": [2, "unix"],
+    module.exports = {
+      rules: {
+        'no-alert': 'error',
+        'no-array-constructor': 'warn',
+        'no-bitwise': 'off',
+        'linebreak-style': ['error', "unix"],
       }
     }
 */
@@ -53,13 +53,13 @@ Return: `Array` of `String`
 
 It has the same API as [configured-eslint-rules'](https://github.com/shinnn/configured-eslint-rules#api) but returns the inverse, an array of the [ESLint rule](http://eslint.org/docs/rules/) names that doesn't have any [rule configurations](http://eslint.org/docs/user-guide/configuring#configuring-rules).
 
-```js
+```javascript
 /*
-    ./dir/.eslintrc:
+    ./dir/.eslintrc.json:
 
     {
       "rules": {
-        "semi": [2, "always"]
+        "semi": ["error", "always"]
       }
     }
 */
@@ -71,12 +71,12 @@ const unconfiguredDir = unconfiguredEslintRules('dir/index.js');
 unconfiguredDir.includes('semi'); //=> false
 ```
 
-```js
+```javascript
 /*
-    ./eslintrc:
+    ./eslintrc.yml:
 
     rules:
-      eqeqeq: 1
+      eqeqeq: warn
 */
 
 const unconfigured = unconfiguredEslintRules({

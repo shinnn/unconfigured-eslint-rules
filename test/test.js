@@ -5,15 +5,7 @@ const test = require('tape');
 const unconfiguredESLintRules = require('..');
 
 test('unconfiguredESLintRules()', t => {
-  t.plan(9);
-
   t.strictEqual(unconfiguredESLintRules.name, 'unconfiguredESLintRules', 'should have a function name.');
-
-  t.deepEqual(
-    unconfiguredESLintRules(),
-    allESLintRules,
-    'should return an array of unconfigured ESLint rules.'
-  );
 
   t.deepEqual(
     unconfiguredESLintRules('test/test.js'),
@@ -45,6 +37,12 @@ test('unconfiguredESLintRules()', t => {
   );
 
   t.throws(
+    () => unconfiguredESLintRules(),
+    /^Error.*No ESLint configuration found\./,
+    'should return an array of unconfigured ESLint rules.'
+  );
+
+  t.throws(
     () => unconfiguredESLintRules(true),
     /TypeError.*true is not a string or an object/,
     'should throw a type error when the first argument is neither a string nor an object.'
@@ -61,4 +59,6 @@ test('unconfiguredESLintRules()', t => {
     /TypeError.*1 is not an object/,
     'should throw a type error when the second argument is not an object.'
   );
+
+  t.end();
 });
