@@ -1,9 +1,9 @@
 'use strict';
 
 const allEslintRules = require('all-eslint-rules');
-const arrayDifference = require('array-difference');
 const configuredESLintRules = require('configured-eslint-rules');
+const difference = require('lodash/fp/difference');
 
-module.exports = function unconfiguredESLintRules(filePath, options) {
-  return arrayDifference(allEslintRules, configuredESLintRules(filePath, options));
+module.exports = function unconfiguredESLintRules(...args) {
+  return difference(allEslintRules, configuredESLintRules(...args));
 };

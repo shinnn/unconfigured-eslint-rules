@@ -3,8 +3,6 @@
 [![NPM version](https://img.shields.io/npm/v/unconfigured-eslint-rules.svg)](https://www.npmjs.com/package/unconfigured-eslint-rules)
 [![Build Status](https://travis-ci.org/shinnn/unconfigured-eslint-rules.svg?branch=master)](https://travis-ci.org/shinnn/unconfigured-eslint-rules)
 [![Coverage Status](https://img.shields.io/coveralls/shinnn/unconfigured-eslint-rules.svg)](https://coveralls.io/r/shinnn/unconfigured-eslint-rules)
-[![Dependency Status](https://david-dm.org/shinnn/unconfigured-eslint-rules.svg)](https://david-dm.org/shinnn/unconfigured-eslint-rules)
-[![devDependency Status](https://david-dm.org/shinnn/unconfigured-eslint-rules/dev-status.svg)](https://david-dm.org/shinnn/unconfigured-eslint-rules#info=devDependencies)
 
 Detect unconfigured [ESLint](http://eslint.org/) rules
 
@@ -90,6 +88,6 @@ unconfigured.includes('eqeqeq'); //=> true
 
 ## License
 
-Copyright (c) 2015 - 2016 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2015 - 2017 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
