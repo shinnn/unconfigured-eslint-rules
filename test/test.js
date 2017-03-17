@@ -1,6 +1,7 @@
 'use strong';
 
 const allESLintRules = require('all-eslint-rules');
+const cloneDeep = require('lodash/fp/cloneDeep');
 const test = require('tape');
 const unconfiguredESLintRules = require('..');
 
@@ -13,11 +14,20 @@ test('unconfiguredESLintRules()', t => {
     'should retrieve unconfigured rules for a given file.'
   );
 
+  const option = {
+    rules: {
+      'no-alert': 'error'
+    }
+  };
+  const clonedOption = cloneDeep(option);
+
   t.deepEqual(
-    unconfiguredESLintRules({rules: {'no-alert': 2}}),
+    unconfiguredESLintRules(option),
     allESLintRules.filter(v => v !== 'no-alert'),
     'should use additional CLIEngine options as its last argument.'
   );
+
+  t.deepEqual(option, clonedOption, 'should not mutate passed options.');
 
   t.deepEqual(
     unconfiguredESLintRules('test/test.js', {useEslintrc: false}),
