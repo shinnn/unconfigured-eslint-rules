@@ -1,6 +1,6 @@
 {
   "name": "unconfigured-eslint-rules",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Detect unconfigured ESLint rules",
   "repository": "shinnn/unconfigured-eslint-rules",
   "scripts": {
