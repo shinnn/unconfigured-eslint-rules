@@ -1,4 +1,4 @@
-'use strong';
+'use strict';
 
 const allESLintRules = require('all-eslint-rules');
 const cloneDeep = require('lodash/fp/cloneDeep');
@@ -6,8 +6,6 @@ const test = require('tape');
 const unconfiguredESLintRules = require('..');
 
 test('unconfiguredESLintRules()', t => {
-  t.strictEqual(unconfiguredESLintRules.name, 'unconfiguredESLintRules', 'should have a function name.');
-
   t.deepEqual(
     unconfiguredESLintRules('test/test.js'),
     allESLintRules.filter(v => v !== 'eol-last'),
