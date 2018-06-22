@@ -1,39 +1,42 @@
 {
-  "name": "unconfigured-eslint-rules",
-  "version": "5.0.0",
-  "description": "Detect unconfigured ESLint rules",
-  "repository": "shinnn/unconfigured-eslint-rules",
-  "scripts": {
-    "pretest": "eslint --config=@shinnn/node --fix --format=codeframe index.js test/test.js",
-    "test": "node test/test.js",
-    "coverage": "istanbul cover test/test.js"
-  },
-  "license": "MIT",
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "eslint",
-    "setting",
-    "config",
-    "configuration",
-    "array",
-    "list",
-    "rule",
-    "rules",
-    "check",
-    "detect",
-    "unconfigured"
-  ],
-  "dependencies": {
-    "all-eslint-rules": "^4.0.0",
-    "configured-eslint-rules": "^4.0.0",
-    "lodash": "^4.17.4"
-  },
-  "devDependencies": {
-    "@shinnn/eslint-config-node": "^3.0.0",
-    "eslint": "^4.0.0",
-    "istanbul": "^0.4.5",
-    "tape": "^4.6.3"
-  }
+	"name": "unconfigured-eslint-rules",
+	"version": "5.0.0",
+	"description": "Detect unconfigured ESLint rules",
+	"repository": "shinnn/unconfigured-eslint-rules",
+	"scripts": {
+		"pretest": "eslint --fix --format=codeframe .",
+		"test": "nyc --reporter=html --reporter=text node test.js"
+	},
+	"license": "MIT",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"eslint",
+		"setting",
+		"config",
+		"configuration",
+		"array",
+		"list",
+		"rule",
+		"rules",
+		"check",
+		"detect",
+		"unconfigured"
+	],
+	"dependencies": {
+		"all-eslint-rules": "^5.0.0",
+		"configured-eslint-rules": "^5.0.1",
+		"lodash": "^4.17.10"
+	},
+	"devDependencies": {
+		"@shinnn/eslint-config-node": "^5.0.0",
+		"eslint": "^5.0.0",
+		"nyc": "^12.0.2",
+		"rmfr": "^2.0.0",
+		"tape": "^4.9.1"
+	},
+	"eslintConfig": {
+		"extends": "@shinnn/node"
+	}
 }

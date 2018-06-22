@@ -1,10 +1,10 @@
 # unconfigured-eslint-rules
 
-[![NPM version](https://img.shields.io/npm/v/unconfigured-eslint-rules.svg)](https://www.npmjs.com/package/unconfigured-eslint-rules)
+[![npm version](https://img.shields.io/npm/v/unconfigured-eslint-rules.svg)](https://www.npmjs.com/package/unconfigured-eslint-rules)
 [![Build Status](https://travis-ci.org/shinnn/unconfigured-eslint-rules.svg?branch=master)](https://travis-ci.org/shinnn/unconfigured-eslint-rules)
-[![Coverage Status](https://img.shields.io/coveralls/shinnn/unconfigured-eslint-rules.svg)](https://coveralls.io/r/shinnn/unconfigured-eslint-rules)
+[![Coverage Status](https://img.shields.io/coveralls/shinnn/unconfigured-eslint-rules.svg)](https://coveralls.io/github/shinnn/unconfigured-eslint-rules)
 
-Detect unconfigured [ESLint](http://eslint.org/) rules
+Detect unconfigured [ESLint](https://eslint.org/) rules
 
 ```javascript
 /*
@@ -31,7 +31,7 @@ unconfigured.includes('linebreak-style'); //=> false
 
 ## Installation
 
-[Use npm](https://docs.npmjs.com/cli/install).
+[Use](https://docs.npmjs.com/cli/install) [npm](https://docs.npmjs.com/getting-started/what-is-npm).
 
 ```
 npm install unconfigured-eslint-rules
@@ -43,13 +43,12 @@ npm install unconfigured-eslint-rules
 const unconfiguredEslintRules = require('unconfigured-eslint-rules');
 ```
 
-### unconfiguredEslintRules([*filePath*][, *options*])
+### unconfiguredEslintRules([*options*])
 
-*filePath*: `String` (directly passed to [configured-eslint-rules](https://github.com/shinnn/configured-eslint-rules))  
-*options*: `Object` (directly passed to configured-eslint-rules)  
-Return: `Array` of `String`
+*options*: `Object` ([ESLint `CLIEngine`](https://eslint.org/docs/developer-guide/nodejs-api#cliengine) constructor options)  
+Return: `Array<string>`
 
-It has the same API as [configured-eslint-rules'](https://github.com/shinnn/configured-eslint-rules#api) but returns the inverse, an array of the [ESLint rule](http://eslint.org/docs/rules/) names that doesn't have any [rule configurations](http://eslint.org/docs/user-guide/configuring#configuring-rules).
+It has the same API as [configured-eslint-rules'](https://github.com/shinnn/configured-eslint-rules#api) but returns the inverse – an array of the [ESLint rule](http://eslint.org/docs/rules/) names that doesn't have any [rule configurations](http://eslint.org/docs/user-guide/configuring#configuring-rules).
 
 ```javascript
 /*
@@ -62,11 +61,11 @@ It has the same API as [configured-eslint-rules'](https://github.com/shinnn/conf
     }
 */
 
-const unconfiguredCwd = unconfiguredEslintRules('index.js');
-unconfiguredCwd.includes('semi'); //=> true
+unconfiguredEslintRules().includes('semi'); //=> true
 
-const unconfiguredDir = unconfiguredEslintRules('dir/index.js');
-unconfiguredDir.includes('semi'); //=> false
+process.chdir('dir');
+
+unconfiguredEslintRules().includes('semi'); //=> false
 ```
 
 ```javascript
@@ -88,6 +87,6 @@ unconfigured.includes('eqeqeq'); //=> true
 
 ## License
 
-Copyright (c) 2015 - 2017 [Shinnosuke Watanabe](https://github.com/shinnn)
+Copyright (c) 2015 - 2018 [Shinnosuke Watanabe](https://github.com/shinnn)
 
 Licensed under [the MIT License](./LICENSE).
