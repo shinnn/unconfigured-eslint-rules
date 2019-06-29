@@ -1,6 +1,6 @@
 {
 	"name": "unconfigured-eslint-rules",
-	"version": "6.0.0",
+	"version": "7.0.0",
 	"description": "Detect unconfigured ESLint rules",
 	"author": "Watanabe Shinnosuke (https://github.com/shinnn)",
 	"repository": "shinnn/unconfigured-eslint-rules",
