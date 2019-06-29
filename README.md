@@ -1,7 +1,7 @@
 # unconfigured-eslint-rules
 
 [![npm version](https://img.shields.io/npm/v/unconfigured-eslint-rules.svg)](https://www.npmjs.com/package/unconfigured-eslint-rules)
-[![Build Status](https://travis-ci.org/shinnn/unconfigured-eslint-rules.svg?branch=master)](https://travis-ci.org/shinnn/unconfigured-eslint-rules)
+[![GitHub Actions](https://action-badges.now.sh/shinnn/unconfigured-eslint-rules)](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/results/shinnn/unconfigured-eslint-rules)
 [![codecov](https://codecov.io/gh/shinnn/unconfigured-eslint-rules/branch/master/graph/badge.svg)](https://codecov.io/gh/shinnn/unconfigured-eslint-rules)
 
 Detect unconfigured [ESLint](https://eslint.org/) rules
